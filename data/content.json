@@ -42,18 +42,18 @@
   "activities": {
     "recent": [
       {
+        "title": "5to Simposio Latinoamericano de Ecofisiología Vegetal",
+        "subtitle": "Simposio anual celebrado por la Red Latinoamericana de Ecofisiología Vegetal",
+        "speaker": "Integrantes de la REDLEV",
+        "cta_label": "Ver en YouTube",
+        "cta_url": "https://youtu.be/OF8qiHpHMeY"
+      },
+      {
         "title": "Seminario REDLEV de octubre 2025",
         "subtitle": "Impacto de perturbaciones asociadas al cambio climático en los bosques tropicales",
         "speaker": "Dra. Chris Smith-Martin (Universidad de Minnesota)",
         "cta_label": "Ver en YouTube",
-        "cta_url": "https://www.youtube.com/@redlatinoamericanadeecofis2139"
-      },
-      {
-        "title": "Seminario REDLEV de junio 2025",
-        "subtitle": "Dinámica de crecimiento, carbono y nutrientes influenciada por modificaciones en la relación fuente-vertedero en Coffea arabica L",
-        "speaker": "MSc. Andrés Felipe León Burgo",
-        "cta_label": "Ver en YouTube",
-        "cta_url": "https://www.youtube.com/@redlatinoamericanadeecofis2139"
+        "cta_url": "https://www.youtube.com/watch?v=UnMph7dD7OU"
       }
     ]
   },
