@@ -70,23 +70,23 @@
   "committee": [
     {
       "name": "Eleinis Ávila-Lovera",
-      "focus": "Ecofisiología de plantas de zonas áridas en áreas tropicales y templadas",
-      "image": "assets/img/placeholder-person.jpg"
+      "focus": "Ecofisiología de plantas de zonas áridas en áreas tropicales y templadas"
+  <!--    "image": "assets/img/placeholder-person.jpg" -->
     },
     {
       "name": "Aleyda Acosta-Rangel",
-      "focus": "Ecofisiología de plantas de cultivo (aguacate, cítricos, lúpulo)",
-      "image": "assets/img/placeholder-person.jpg"
+      "focus": "Ecofisiología de plantas de cultivo (aguacate, cítricos, lúpulo)"
+  <!--    "image": "assets/img/placeholder-person.jpg"
     },
     {
       "name": "Carlos Aucique-Perez",
-      "focus": "Fisiología vegetal, fenotipado de plantas de cultivo",
-      "image": "assets/img/placeholder-person.jpg"
+      "focus": "Fisiología vegetal, fenotipado de plantas de cultivo"
+   <!--   "image": "assets/img/placeholder-person.jpg" -->
     },
     {
       "name": "Marco Garrido-Salinas",
-      "focus": "Ecofisiología de las plantas frutales, relaciones hídricas",
-      "image": "assets/img/placeholder-person.jpg"
+      "focus": "Ecofisiología de las plantas frutales, relaciones hídricas"
+    <!--  "image": "assets/img/placeholder-person.jpg" -->
     }
   ]
 }
