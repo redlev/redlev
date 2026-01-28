@@ -215,41 +215,44 @@
     });
   }
 
-  function renderCommittee(items) {
-    const wrap = $("committeeGrid");
-    if (!wrap) return;
+function renderCommittee(items) {
+  const wrap = document.getElementById("committeeGrid");
+  if (!wrap) return;
 
-    wrap.innerHTML = "";
+  wrap.innerHTML = "";
 
-    items.forEach((m) => {
-      const card = document.createElement("article");
-      card.className = "card";
+  items.forEach((m) => {
+    const card = document.createElement("article");
+    card.className = "card";
 
-      const img = document.createElement("img");
-      img.src = m.image || "assets/img/placeholder-person.jpg";
-      img.alt = m.name ? `Foto de ${m.name}` : "Miembro del comité";
-      img.style.width = "100%";
-      img.style.height = "210px";
-      img.style.objectFit = "cover";
-      img.style.borderRadius = "12px";
-      img.style.border = "1px solid var(--border)";
-      img.loading = "lazy";
+    // Nombre (con link si existe)
+    const h = document.createElement("h3");
+    h.className = "h3";
+    h.style.marginBottom = "6px";
 
-      const h = document.createElement("h3");
-      h.className = "h3";
-      h.style.marginTop = "10px";
+    if (m.url) {
+      const a = document.createElement("a");
+      a.href = m.url;
+      a.target = "_blank";
+      a.rel = "noreferrer";
+      a.className = "committee-name";
+      a.textContent = m.name || "Nombre Apellido";
+      h.appendChild(a);
+    } else {
       h.textContent = m.name || "Nombre Apellido";
+    }
 
-      const p = document.createElement("p");
-      p.className = "text";
-      p.textContent = m.focus || "";
+    // Línea de enfoque/área
+    const p = document.createElement("p");
+    p.className = "text";
+    p.textContent = m.focus || "";
 
-      card.appendChild(img);
-      card.appendChild(h);
-      card.appendChild(p);
+    card.appendChild(h);
+    card.appendChild(p);
 
-      wrap.appendChild(card);
-    });
-  }
+    wrap.appendChild(card);
+  });
+}
+
 })();
 
