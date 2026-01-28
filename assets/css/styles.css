@@ -310,3 +310,13 @@ code{ background: #f1f1f1; padding: 2px 6px; border-radius: 8px; }
   .nav-link{ padding: 10px 12px; }
 }
 
+.committee-name{
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 950;
+}
+.committee-name:hover{
+  color: var(--accent);
+  text-decoration: underline;
+}
+
