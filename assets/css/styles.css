@@ -35,6 +35,9 @@ body{
   padding: 0 18px;
 }
 
+/* Formato Abstract */
+#researchAbstract { white-space: pre-line; }
+
 /* Accesibilidad */
 .skip-link{
   position: absolute;
