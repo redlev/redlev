@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Red Latinoamericana de Ecofisiología Vegetal (REDLEV)." />
+  <title>REDLEV · Red Latinoamericana de Ecofisiología Vegetal</title>
+
+  <!--
+    =========================
+    REDLEV — Sitio 1 página
+    =========================
+
+    IDEA PRINCIPAL (para hacerlo “operacional” y fácil de actualizar):
+    - Este index.html define la estructura visual.
+    - El contenido que cambia (próximo seminario, investigación del mes, links) vive en:
+        /data/content.json
+    - Un script (assets/js/main.js) lee el JSON y “rellena” la página.
+
+    ¿Qué editas mes a mes?
+    - data/content.json → secciones: next_activity, activities_recent, featured_research
+
+    Nota GitHub Pages:
+    - El archivo principal debería llamarse index.html (GitHub sirve index por defecto).
+    - Para mantener compatibilidad con tu sitio actual, puedes dejar un INICIO.html que redirija a index.html.
+  -->
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!--
+    LOGO:
+    Coloca el logo que adjuntaste en:
+      /assets/img/logo.png
+    y el banner (opcional) en:
+      /assets/img/hero.jpg
+  -->
+  <link rel="icon" href="assets/img/logo.png" />
+</head>
+
+<body>
+  <!-- Accesibilidad: permite saltar al contenido principal (útil con teclado) -->
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+  <!-- Header fijo: navegación por secciones (sitio 1 página) -->
+  <header class="header" role="banner">
+    <div class="container header-row">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <img class="brand-logo" src="assets/img/logo.png" alt="Logo REDLEV" />
+        <span class="brand-text">
+          <span class="brand-name" id="siteName">REDLEV</span>
+          <span class="brand-tagline" id="siteTagline">Red Latinoamericana de Ecofisiología Vegetal</span>
+        </span>
+      </a>
+
+      <!-- Menú móvil (aparece solo en pantallas pequeñas) -->
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="nav" class="nav" aria-label="Navegación principal">
+        <a class="nav-link" href="#inicio">Inicio</a>
+        <a class="nav-link" href="#quienes">Quiénes somos</a>
+        <a class="nav-link" href="#actividades">Actividades</a>
+        <a class="nav-link" href="#investigacion">Investigación</a>
+        <a class="nav-link" href="#comite">Comité</a>
+        <a class="nav-link nav-cta" id="joinLink" href="#">Únete</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================================================
+       SECCIÓN: INICIO / HERO
+       =================================================== -->
+  <main class="container" role="main">
+    <section id="inicio" class="hero" aria-label="Presentación">
+      <div>
+        <p class="eyebrow">REDLEV</p>
+        <h1 id="heroTitle">Red Latinoamericana de Ecofisiología Vegetal</h1>
+        <p class="lead" id="heroObjective">
+          <!-- Se completa desde data/content.json (campo home.objective) -->
+        </p>
+
+        <div class="actions">
+          <a class="button" id="contactLink" href="#" target="_blank" rel="noreferrer">Contacto</a>
+          <a class="button button-secondary" href="#actividades">Ver actividades</a>
+        </div>
+
+        <div class="social" aria-label="Redes sociales">
+          <a class="social-link" id="youtubeLink" href="#" target="_blank" rel="noreferrer">YouTube</a>
+          <a class="social-link" id="xLink" href="#" target="_blank" rel="noreferrer">X</a>
+          <a class="social-link" id="facebookLink" href="#" target="_blank" rel="noreferrer">Facebook</a>
+          <!-- Estos dos se muestran solo si agregas los links en content.json -->
+          <a class="social-link" id="instagramLink" href="#" target="_blank" rel="noreferrer">Instagram</a>
+          <a class="social-link" id="linkedinLink" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <!-- Tarjeta con números: útil para “estado” de la red -->
+      <aside class="card hero-card" aria-label="Estado de la red">
+        <h2 class="h2">Datos de la red</h2>
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric-value" id="foundedYear">2019</div>
+            <div class="metric-label">Fundación</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value" id="membersCount">—</div>
+            <div class="metric-label">Miembros</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value" id="seminarsFrequency">Mensual</div>
+            <div class="metric-label">Seminarios</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value" id="timezone">—</div>
+            <div class="metric-label">Zona horaria</div>
+          </div>
+        </div>
+        <p class="hint">Edita estos datos en <code>data/content.json</code>.</p>
+      </aside>
+    </section>
+
+    <!-- ===================================================
+         SECCIÓN: QUIÉNES SOMOS
+         =================================================== -->
+    <section id="quienes" class="section" aria-label="Quiénes somos">
+      <div class="section-head">
+        <h2 class="h2">Quiénes somos</h2>
+      </div>
+      <p class="text" id="aboutText"></p>
+
+      <div class="callout">
+        <div>
+          <h3 class="callout-title">Seminarios mensuales</h3>
+          <p class="callout-text">Último jueves o viernes de cada mes (horario a convenir con el ponente).</p>
+        </div>
+        <div class="actions">
+          <a class="button button-secondary" href="#actividades">Ver calendario</a>
+          <a class="button" id="joinLink2" href="#" target="_blank" rel="noreferrer">Formulario de registro</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         SECCIÓN: ACTIVIDADES
+         =================================================== -->
+    <section id="actividades" class="section" aria-label="Actividades">
+      <div class="section-head">
+        <h2 class="h2">Actividades</h2>
+        <p class="hint">Para actualizar: edita <code>next_activity</code> y <code>activities.recent</code> en <code>data/content.json</code>.</p>
+      </div>
+
+      <!-- Próxima actividad (destacada) -->
+      <article class="card split" aria-label="Próxima actividad">
+        <div class="split-body">
+          <p class="eyebrow" id="nextEyebrow">Próxima actividad</p>
+          <h3 class="h3" id="nextTitle">—</h3>
+          <p class="meta" id="nextMeta">—</p>
+          <p class="text" id="nextDescription">—</p>
+          <div class="actions">
+            <a class="button" id="nextCta" href="#" target="_blank" rel="noreferrer">Inscripción / Información</a>
+          </div>
+        </div>
+        <div class="split-media">
+          <img id="nextImage" src="assets/img/placeholder-banner.jpg" alt="Banner actividad" />
+        </div>
+      </article>
+
+      <!-- Actividades recientes (lista) -->
+      <div class="section-subhead">
+        <h3 class="h3">Actividades recientes</h3>
+      </div>
+      <div id="recentActivities" class="grid"></div>
+
+      <p class="hint" style="margin-top:10px;">
+        Tip: si quieres agregar más actividades, duplica un ítem dentro de <code>activities.recent</code>.
+      </p>
+    </section>
+
+    <!-- ===================================================
+         SECCIÓN: INVESTIGACIÓN DESTACADA
+         =================================================== -->
+    <section id="investigacion" class="section" aria-label="Investigación destacada">
+      <div class="section-head">
+        <h2 class="h2">Investigación destacada del mes</h2>
+        <p class="hint">Para actualizar: edita <code>featured_research</code> en <code>data/content.json</code>.</p>
+      </div>
+
+      <article class="card" aria-label="Investigación destacada">
+        <p class="eyebrow" id="researchEyebrow">Este mes destacamos</p>
+        <h3 class="h3" id="researchTitle">—</h3>
+        <p class="meta" id="researchCitation">—</p>
+        <p class="text" id="researchAbstract">—</p>
+        <div class="actions">
+          <a class="button button-secondary" id="researchLink" href="#" target="_blank" rel="noreferrer">Ver publicación</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================================================
+         SECCIÓN: COMITÉ
+         =================================================== -->
+    <section id="comite" class="section" aria-label="Comité">
+      <div class="section-head">
+        <h2 class="h2">Comité REDLEV</h2>
+        <p class="hint">Edita personas en <code>committee</code> dentro de <code>data/content.json</code>.</p>
+      </div>
+
+      <!-- El JS crea tarjetas en esta grilla -->
+      <div id="committeeGrid" class="grid"></div>
+    </section>
+
+    <!-- ===================================================
+         SECCIÓN: CONTACTO / PIE
+         =================================================== -->
+    <section class="section" aria-label="Contacto">
+      <div class="callout">
+        <div>
+          <h3 class="callout-title">¿Quieres participar o proponer un seminario?</h3>
+          <p class="callout-text">Escríbenos o completa el formulario de contacto. Mantendremos este espacio actualizado con actividades e investigación destacada.</p>
+        </div>
+        <div class="actions">
+          <a class="button" id="contactLink2" href="#" target="_blank" rel="noreferrer">Contacto</a>
+          <a class="button button-secondary" id="privacyLink" href="#" target="_blank" rel="noreferrer">Privacidad</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-row">
+      <p class="footer-text">© <span id="year"></span> <span id="footerName">REDLEV</span>. Publicado con GitHub Pages.</p>
+      <p class="footer-text">Síguenos: <a class="link" id="youtubeLink2" href="#" target="_blank" rel="noreferrer">YouTube</a></p>
+    </div>
+  </footer>
+
+  <noscript>
+    <div class="noscript">
+      Esta web usa un archivo <strong>content.json</strong> para cargar contenido. Activa JavaScript o edita el HTML directamente.
+    </div>
+  </noscript>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
