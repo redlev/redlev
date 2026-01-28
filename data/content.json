@@ -1,1 +1,93 @@
+{
+  "site": {
+    "name": "REDLEV",
+    "tagline": "Red Latinoamericana de Ecofisiología Vegetal",
+    "founded_year": 2019,
+    "members_count": 144,
+    "default_timezone_label": "UTC/GMT-5 (hora de Panamá)"
+  },
+
+  "links": {
+    "contact_form": "https://docs.google.com/forms/d/e/1FAIpQLSfbDKAloJ3slmMzNbkMgzTqrBY6uvN7AIl_XirbctNMkkiEfA/viewform?usp=sf_link",
+    "join_form": "https://docs.google.com/forms/d/e/1FAIpQLSenY7jbKPonRTWQTuBAtmp5wBjZscqhEcmsGVlx-OEzog8Ryw/viewform?usp=sf_link",
+    "privacy_policy": "https://drive.google.com/file/d/1oZbdoIEIK2kpYRrWwahLoVZ8TOiAi7yD/view?usp=sharing",
+
+    "youtube": "https://www.youtube.com/@redlatinoamericanadeecofis2139",
+    "x": "https://x.com/ecofisiologia",
+    "facebook_group": "https://www.facebook.com/groups/547466132928748/?locale=es_LA",
+
+    "instagram": "",
+    "linkedin": ""
+  },
+
+  "home": {
+    "objective": "La Red Latinoamericana de Ecofisiología Vegetal (REDLEV) fue creada en el año 2019 de la mano de científicas y científicos de Latinoamérica. Nuestra intención es crear redes entre investigadores a lo largo y ancho del continente, y dar a conocer la ciencia Latina en nuestros idiomas."
+  },
+
+  "about": {
+    "intro": "Fundada en 2019, la REDLEV tiene como meta la colaboración internacional entre instituciones e investigadores interesados en la ecofisiología vegetal en América Latina. Esta colaboración se lleva a cabo a través de seminarios, intercambio de metodologías e información sobre oportunidades de investigación (financiamiento de proyectos, becas de estudio, asistencia a eventos científicos, entre otros)."
+  },
+
+  "next_activity": {
+    "eyebrow": "Próximas actividades",
+    "title": "Seminario mensual REDLEV (actualizar cada mes)",
+    "datetime_text": "Fecha · Hora · Zona horaria",
+    "description": "Descripción breve del seminario o evento. (2–3 líneas).",
+    "cta_label": "Inscripción / Información",
+    "cta_url": "",
+    "image": "assets/img/placeholder-banner.jpg",
+    "image_alt": "Banner del seminario"
+  },
+
+  "activities": {
+    "recent": [
+      {
+        "title": "Seminario REDLEV de octubre 2025",
+        "subtitle": "Impacto de perturbaciones asociadas al cambio climático en los bosques tropicales",
+        "speaker": "Dra. Chris Smith-Martin (Universidad de Minnesota)",
+        "cta_label": "Ver en YouTube",
+        "cta_url": "https://www.youtube.com/@redlatinoamericanadeecofis2139"
+      },
+      {
+        "title": "Seminario REDLEV de junio 2025",
+        "subtitle": "Dinámica de crecimiento, carbono y nutrientes influenciada por modificaciones en la relación fuente-vertedero en Coffea arabica L",
+        "speaker": "MSc. Andrés Felipe León Burgo",
+        "cta_label": "Ver en YouTube",
+        "cta_url": "https://www.youtube.com/@redlatinoamericanadeecofis2139"
+      }
+    ]
+  },
+
+  "featured_research": {
+    "eyebrow": "Este mes destacamos",
+    "title": "Drought-stress memory confers cold hardiness in grapefruit (Citrus paradisi) ...",
+    "citation": "Iqbal et al., 2025 · Plant Stress",
+    "abstract": "Resumen en español (idealmente 120–200 palabras) con foco en el aporte ecofisiológico y aplicaciones.",
+    "paper_label": "Ver publicación",
+    "paper_url": ""
+  },
+
+  "committee": [
+    {
+      "name": "Eleinis Ávila-Lovera",
+      "focus": "Ecofisiología de plantas de zonas áridas en áreas tropicales y templadas",
+      "image": "assets/img/placeholder-person.jpg"
+    },
+    {
+      "name": "Aleyda Acosta-Rangel",
+      "focus": "Ecofisiología de plantas de cultivo (aguacate, cítricos, lúpulo)",
+      "image": "assets/img/placeholder-person.jpg"
+    },
+    {
+      "name": "Carlos Aucique-Perez",
+      "focus": "Fisiología vegetal, fenotipado de plantas de cultivo",
+      "image": "assets/img/placeholder-person.jpg"
+    },
+    {
+      "name": "Marco Garrido-Salinas",
+      "focus": "Ecofisiología de las plantas frutales, relaciones hídricas",
+      "image": "assets/img/placeholder-person.jpg"
+    }
+  ]
+}
 
