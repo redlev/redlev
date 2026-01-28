@@ -58,15 +58,13 @@
     ]
   },
 
-  "featured_research": {
-    "eyebrow": "Este mes destacamos",
-    "title": "Conservative water-use strategy in walnut (Juglans regia) cv. ‘Chandler’ grafted onto rootstocks differing in root hydraulic conductance and vigor",
-    "citation": "Pardo, A., Infante, R., Otárola, J. et al. Conservative water-use strategy in walnut (Juglans regia) cv. ‘Chandler’ grafted onto rootstocks differing in root hydraulic conductance and vigor. Plant Soil (2026). https://doi.org/10.1007/s11104-026-08293-1",
-    "abstract": "Los portainjertos se emplean ampliamente en nogal para modular el vigor y la tolerancia al estrés; sin embargo, persiste la incertidumbre sobre hasta qué punto los rasgos del portainjerto se traducen en el desempeño del vástago bajo sequía. En este estudio se evaluó si portainjertos clonales contrastantes RX1 y VX211, y un portainjerto de semilla de Juglans regia, modifican la capacidad hidráulica radicular y, en consecuencia, el estado hídrico y el intercambio gaseoso del cultivar Chandler cultivado en maceta bajo un déficit hídrico progresivo.
-Chandler se injertó sobre plántulas de J. regia (CH/JU) o sobre los clonales RX1 y VX211 (CH/RX1, CH/VX211). Asimismo, se incluyeron plantas no injertadas de RX1 y VX211 para caracterizar rasgos dependientes del genotipo en ausencia de la unión de injerto. Las plantas se mantuvieron bajo condiciones bien regadas o sometidas a déficit hídrico progresivo. Se midieron el diámetro de tronco, la masa seca de raíces, la conductancia y conductividad hidráulica radicular (Kr25, Lr25), potenciales hídricos foliares, intercambio gaseoso, punto de pérdida de turgor (TLP), área de hidroscape (HA) y la transpiración de planta completa.
-El déficit hídrico redujo el intercambio gaseoso, sin afectar la masa radicular ni el diámetro de tronco. La biomasa y los rasgos hidráulicos de la raíz variaron entre combinaciones vástago–portainjerto, con CH/JU y VX211 mostrando mayores Kr25 y/o Lr25 que RX1. Entre combinaciones injertadas, el TLP fue similar y los valores de HA fueron bajos, siendo CH/JU el de menor HA relativa.",
-    "paper_label": "Ver publicación",
-    "paper_url": "https://doi.org/10.1007/s11104-026-08293-1"
+"featured_research": {
+  "eyebrow": "Este mes destacamos",
+  "title": "Conservative water-use strategy in walnut (Juglans regia) cv. ‘Chandler’ grafted onto rootstocks differing in root hydraulic conductance and vigor",
+  "citation": "Pardo, A., Infante, R., Otárola, J. et al. Conservative water-use strategy in walnut (Juglans regia) cv. ‘Chandler’ grafted onto rootstocks differing in root hydraulic conductance and vigor. Plant Soil (2026). https://doi.org/10.1007/s11104-026-08293-1",
+  "abstract": "Los portainjertos se emplean ampliamente en nogal para modular el vigor y la tolerancia al estrés; sin embargo, persiste la incertidumbre sobre hasta qué punto los rasgos del portainjerto se traducen en el desempeño del vástago bajo sequía. En este estudio se evaluó si portainjertos clonales contrastantes RX1 y VX211, y un portainjerto de semilla de Juglans regia, modifican la capacidad hidráulica radicular y, en consecuencia, el estado hídrico y el intercambio gaseoso del cultivar Chandler cultivado en maceta bajo un déficit hídrico progresivo.\n\nChandler se injertó sobre plántulas de J. regia (CH/JU) o sobre los clonales RX1 y VX211 (CH/RX1, CH/VX211). Asimismo, se incluyeron plantas no injertadas de RX1 y VX211 para caracterizar rasgos dependientes del genotipo en ausencia de la unión de injerto. Las plantas se mantuvieron bajo condiciones bien regadas o sometidas a déficit hídrico progresivo. Se midieron el diámetro de tronco, la masa seca de raíces, la conductancia y conductividad hidráulica radicular (Kr25, Lr25), potenciales hídricos foliares, intercambio gaseoso, punto de pérdida de turgor (TLP), área de hidroscape (HA) y la transpiración de planta completa.\n\nEl déficit hídrico redujo el intercambio gaseoso, sin afectar la masa radicular ni el diámetro de tronco. La biomasa y los rasgos hidráulicos de la raíz variaron entre combinaciones vástago–portainjerto, con CH/JU y VX211 mostrando mayores Kr25 y/o Lr25 que RX1. Entre combinaciones injertadas, el TLP fue similar y los valores de HA fueron bajos, siendo CH/JU el de menor HA relativa.",
+  "paper_label": "Ver publicación",
+  "paper_url": "https://doi.org/10.1007/s11104-026-08293-1"
   },
 
   "committee": [
