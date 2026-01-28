@@ -73,19 +73,15 @@
     });
 
 function startPanamaClock() {
-  const el = document.getElementById("timezone");
+  const el = document.getElementById("panamaClock");
   if (!el) return;
 
-  const label = document.getElementById("timezoneMetricLabel");
-  if (label) label.textContent = "Hora Panamá (UTC-5)";
-
-  // Formato 24h, HH:MM (puedes activar segundos si quieres)
   const options = {
     timeZone: "America/Panama",
     hour: "2-digit",
     minute: "2-digit",
     hour12: false
-    // second: "2-digit"  // <- descomenta si quieres HH:MM:SS
+    // second: "2-digit" // <- si quieres segundos
   };
 
   const fmt = new Intl.DateTimeFormat("es-PA", options);
@@ -93,8 +89,7 @@ function startPanamaClock() {
   const tick = () => { el.textContent = fmt.format(new Date()); };
   tick();
 
-  // Si muestras segundos: usa 1000. Si no: 30000 es suficiente.
-  setInterval(tick, 30000);
+  setInterval(tick, 30000); // 30s (si usas segundos, cambia a 1000)
 }
    
   function renderGlobal(data) {
