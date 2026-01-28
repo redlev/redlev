@@ -133,25 +133,44 @@
     renderCommittee(data?.committee || []);
   }
 
-   function startPanamaClock() {
-     const el = document.getElementById("panamaClock");
-     if (!el) return;
-   
-     const options = {
-       timeZone: "America/Panama",
-       hour: "2-digit",
-       minute: "2-digit",
-       hour12: false
-       // second: "2-digit" // <- si quieres segundos
-     };
-   
-     const fmt = new Intl.DateTimeFormat("es-PA", options);
-   
-     const tick = () => { el.textContent = fmt.format(new Date()); };
-     tick();
-   
-     setInterval(tick, 30000); // 30s (si usas segundos, cambia a 1000)
-   }
+  function renderCommittee(items) {
+  const wrap = document.getElementById("committeeGrid");
+  if (!wrap) return;
+
+  wrap.innerHTML = "";
+
+  items.forEach((m) => {
+    const card = document.createElement("article");
+    card.className = "card";
+
+    // Nombre (con link si existe)
+    const h = document.createElement("h3");
+    h.className = "h3";
+    h.style.marginBottom = "6px";
+
+    if (m.url) {
+      const a = document.createElement("a");
+      a.href = m.url;
+      a.target = "_blank";
+      a.rel = "noreferrer";
+      a.className = "committee-name";
+      a.textContent = m.name || "Nombre Apellido";
+      h.appendChild(a);
+    } else {
+      h.textContent = m.name || "Nombre Apellido";
+    }
+
+    // Línea de enfoque/área
+    const p = document.createElement("p");
+    p.className = "text";
+    p.textContent = m.focus || "";
+
+    card.appendChild(h);
+    card.appendChild(p);
+
+    wrap.appendChild(card);
+  });
+}
    
   function renderRecentActivities(items) {
     const wrap = $("recentActivities");
