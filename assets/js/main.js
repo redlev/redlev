@@ -133,33 +133,6 @@
     renderCommittee(data?.committee || []);
   }
 
-  function renderCommittee(items) {
-  const wrap = document.getElementById("committeeGrid");
-  if (!wrap) return;
-
-  wrap.innerHTML = "";
-
-  items.forEach((m) => {
-    const card = document.createElement("article");
-    card.className = "card";
-
-    // Nombre (con link si existe)
-    const h = document.createElement("h3");
-    h.className = "h3";
-    h.style.marginBottom = "6px";
-
-    if (m.url) {
-      const a = document.createElement("a");
-      a.href = m.url;
-      a.target = "_blank";
-      a.rel = "noreferrer";
-      a.className = "committee-name";
-      a.textContent = m.name || "Nombre Apellido";
-      h.appendChild(a);
-    } else {
-      h.textContent = m.name || "Nombre Apellido";
-    }
-
     // Línea de enfoque/área
     const p = document.createElement("p");
     p.className = "text";
@@ -214,6 +187,49 @@
       wrap.appendChild(card);
     });
   }
+
+function startPanamaClock() {
+  const el = document.getElementById("panamaClock");
+  if (!el) return;
+
+  // Formato HH:MM:SS (más evidente; si no quieres segundos, te lo ajusto abajo)
+  let fmt;
+  try {
+    fmt = new Intl.DateTimeFormat("es-PA", {
+      timeZone: "America/Panama",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false
+    });
+  } catch (e) {
+    fmt = null; // fallback abajo
+  }
+
+  const tick = () => {
+    try {
+      if (fmt) {
+        el.textContent = fmt.format(new Date());
+        return;
+      }
+      // Fallback manual UTC-5 si Intl/timeZone fallara
+      const now = new Date();
+      const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+      const pan = new Date(utc + (-5) * 3600000);
+      const hh = String(pan.getHours()).padStart(2, "0");
+      const mm = String(pan.getMinutes()).padStart(2, "0");
+      const ss = String(pan.getSeconds()).padStart(2, "0");
+      el.textContent = `${hh}:${mm}:${ss}`;
+    } catch (err) {
+      // si algo raro pasa, dejamos un indicador
+      el.textContent = "--:--";
+      console.error("Clock error:", err);
+    }
+  };
+
+  tick();
+  setInterval(tick, 1000);
+}
 
 function renderCommittee(items) {
   const wrap = document.getElementById("committeeGrid");
